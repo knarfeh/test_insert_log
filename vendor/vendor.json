@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "w5xwoVKwhp3i8rF8czjg6zf1UN8=",
+			"path": "gopkg.in/olivere/elastic.v2",
+			"revision": "4f4a971f9bff46f4a26e5bd3e889197c1659b112",
+			"revisionTime": "2016-11-18T12:31:29Z"
+		},
+		{
+			"checksumSHA1": "TYefriikhzyFZ9ynNHgYUjeoHgw=",
+			"path": "gopkg.in/olivere/elastic.v2/backoff",
+			"revision": "4f4a971f9bff46f4a26e5bd3e889197c1659b112",
+			"revisionTime": "2016-11-18T12:31:29Z"
+		},
+		{
+			"checksumSHA1": "O5dZe+m70S7vbkgePsMLrUc86DA=",
+			"path": "gopkg.in/olivere/elastic.v2/uritemplates",
+			"revision": "4f4a971f9bff46f4a26e5bd3e889197c1659b112",
+			"revisionTime": "2016-11-18T12:31:29Z"
+		}
+	],
+	"rootPath": "github.com/knarfeh/test_insert_log"
+}
