@@ -42,18 +42,10 @@ func CreateLogdata(log_number int64, route int64) *LogData {
 		Created_at: int64(timestamp*1E6) + (int64(nano) / 1E3),
 		Machine:    "127.0.0.1",
 		Log_type:   "stdout",
-		Log_data: fmt.Sprintf("This is useless sentence just for extend the log length-1."+
-			"This is useless sentence just for extend the log length-2 "+
-			"This is useless sentence just for extend the log length-3"+
-			"This is useless sentence just for extend the log length-4"+
-			"This is useless sentence just for extend the log length-5"+
-			"This is useless sentence just for extend the log length-6"+
-			"This is useless sentence just for extend the log length-7"+
-			"This is useless sentence just for extend the log length-8"+
-			"This is useless sentence just for extend the log length-9"+
+		Log_data: fmt.Sprintf("This is useless 1."+
 			"route: %d Create log data: data number %d\n", route, log_number+int64(1)),
 		Container_name: "test",
-		App_id:         "76964db2_1022_4ba0_98b3_6b281214b007",
+		App_id:         fmt.Sprintf("app_id_%d", log_number+int64(1)),
 		Instance_id:    "8c713d9c_c630_11e6_b9df_2e568da87f13",
 		Log_Detail:     "",
 	}
@@ -67,6 +59,7 @@ func InsertData(client *elastic.Client, route int64, index_id int) error {
 		for i := 0; i < *argBulkSize; i++ {
 			log_data := CreateLogdata(totalLogNumber, route)
 			totalLogNumber += int64(1)
+
 			es_index := fmt.Sprintf("log-2016122%d", index_id)
 			//			timestamp := time.Now().Unix()
 			//            indexNum := fmt.Sprintf("%d", timestamp * 1E9 + int64(time.Now().Nanosecond()))
